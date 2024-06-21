@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">TrashHub</string>
+    <string name="google_maps_key">AIzaSyCQF3hN6j6B0HvnxjD2YFZyh0qiQw7UFUI</string>
+    <string name="image_description" />
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="recycle_logo">Recycle Logo</string>
+    <string name="welcome_message">Hello, Selamat datang di TrashHub\nJangan lupa daur ulang sampah mu hari ini!</string>
+    <string name="trash_detection">Trash Detection</string>
+    <string name="trash_pickup">Trash PickUp</string>
+    <string name="home">Home</string>
+    <string name="news">Article</string>
+    <string name="account">Account</string>
+    <string name="welcome_icon">avatar</string>
+    <string name="search_icon">pencarian</string>
+    <string name="education_image_desc">education image</string>
+    <string name="camera">camera</string>
+    <string name="gallery">galery</string>
+    <string name="upload">Analyze</string>
+    <string name="result">Hasil Analisis:</string>
+    <string name="jenis">Jenis Sampah:</string>
+    <string name="author_date">By %1$s - %2$s</string>
+    <string name="article_image">article image</string>
+    <string name="article_author_date">By %1$s - %2$s</string>
+    <string name="title_news" />
+    <string name="empty_image_warning">empty</string>
+    <string name="network_error">Network error. Please check your connection.</string>
+    <string name="server_error">Server error. Please try again later.</string>
+    <string name="please_select_image_first">Please select image first</string>
+    <string name="no_result">no result</string>
+    <string name="logout">Logout</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="profile_image">Profile Image</string>
+    <string name="back">back</string>
+    <string name="photo">photo</string>
+
+</resources>

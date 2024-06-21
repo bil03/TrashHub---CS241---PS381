@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- Izin untuk membaca gambar dan video dari penyimpanan di Android 13 dan yang lebih baru -->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+
+    <!-- Izin untuk membaca penyimpanan eksternal di Android 12 dan yang lebih lama -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+
+    <!-- Izin untuk menulis ke penyimpanan eksternal di Android 9 dan yang lebih lama -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28"/>
+
+
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TrashHub"
+        tools:targetApi="31">
+        <activity
+            android:name=".view.articles.ArticleDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.main.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.articles.ArticlesActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".view.TrashDetection.PredictionActivity"
+            android:exported="false" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCQF3hN6j6B0HvnxjD2YFZyh0qiQw7UFUI" />
+        <activity
+            android:name=".view.Pickup.PickupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.Pickup.MapsActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".view.splash.FirstActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.main.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.splash.SecondActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.register.register_user.RegisterUserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.register.register_mitra.RegisterMitraActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.Profile.ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.education.DetailEducationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.splash.StartedActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.neisha.trashhub.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
+        </provider>
+
+        <!-- Trigger Google Play services to install the backported photo picker module. -->
+        <!--suppress AndroidDomInspection -->
+        <service android:name="com.google.android.gms.metadata.ModuleDependencies"
+            android:enabled="false"
+            android:exported="false"
+            tools:ignore="MissingClass">
+            <intent-filter>
+                <action android:name="com.google.android.gms.metadata.MODULE_DEPENDENCIES" />
+            </intent-filter>
+            <meta-data android:name="photopicker_activity:0:required" android:value="" />
+        </service>
+    </application>
+</manifest>

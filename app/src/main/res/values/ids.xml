@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="result_image" type="id" />
+    <item name="result_text" type="id" />
+    <item name="jenis_text" type="id" />
+</resources>
